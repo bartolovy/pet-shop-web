@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Shopping Bag</h1>
+<div mat-dialog-content>
+    <div class="shop-item" *ngFor='let item of shoppingCart?.shoppingCartItems'>
+        <span [ngClass]='{error: item.isOutOfStock}'>{{item.productName}} X {{item.amount}} {{item.total | currency }}</span>
+        <a (click)='remove(item.productId)'><mat-icon>delete</mat-icon></a>
+        <mat-divider></mat-divider>
+    </div>
+    <div *ngIf='checkStock()' class="error">Some of the products from the basket are currently out of stock.</div>
+    <div id="total">Total: {{shoppingCart?.total | currency }}</div>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button mat-dialog-close (click)='purchase()' color='primary' [disabled]="checkStock()">Confirm and Pay</button>
+</div>

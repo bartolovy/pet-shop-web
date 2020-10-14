@@ -1,0 +1,7 @@
+.categories {
+    width: 200px;
+    padding: 15px;
+  }
+  .mat-drawer-content {
+    min-height: calc(100vh - 64px);
+  }

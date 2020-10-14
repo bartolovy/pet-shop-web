@@ -1,0 +1,20 @@
+.alert-wrap {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    min-width: 300px;
+    background: #00AF74;
+    border-radius: 8px;
+    color: #FFFFFF;
+    padding: 0 30px;
+    text-align: center;
+    z-index: 99;
+}
+.alert-success {
+    background: #00AF74;
+    color: #fff;
+}
+.alert-danger {
+    background: #FF4838;
+    color: #fff;
+}

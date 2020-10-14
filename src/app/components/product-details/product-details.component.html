@@ -1,0 +1,25 @@
+<mat-card class="product-card" *ngIf='product'>
+    <mat-card-header>
+        <mat-card-title>{{product.name}}</mat-card-title>
+        <mat-card-subtitle>{{product.price | currency }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://www.rajanoverseas.co.in/image/data/gallery/img-gallery1.jpg">
+    <mat-card-content>
+        <form [formGroup]='form' (ngSubmit)='buy(product.id)'>
+            <mat-form-field>
+                <mat-label>Amount: </mat-label>
+                <input matInput type="number" formControlName="amount">
+                <mat-error *ngIf="form.get('amount')?.hasError('required')">
+                    Amount is required
+                </mat-error>
+                <mat-error *ngIf="form.get('amount')?.hasError('min')">
+                    Amount min value is 0
+                </mat-error>
+                <mat-error *ngIf="form.get('amount')?.hasError('max')">
+                    Available on stock {{product.numberOfItemsInStock}}
+                </mat-error>
+            </mat-form-field>
+            <button mat-raised-button type="submit" [disabled]="form.invalid" color='primary'>Buy</button>
+        </form>
+    </mat-card-content>
+</mat-card>

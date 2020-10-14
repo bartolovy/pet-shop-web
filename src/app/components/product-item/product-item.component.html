@@ -1,0 +1,10 @@
+<mat-card class="product-card" *ngIf='product'>
+    <mat-card-header>
+        <mat-card-title routerLink='{{product.id}}'><a class="link">{{product.name}}</a></mat-card-title>
+        <mat-card-subtitle>{{product.price | currency }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://www.rajanoverseas.co.in/image/data/gallery/img-gallery1.jpg">
+    <mat-card-content>
+        <button mat-raised-button (click)='buy(product.id)' color='primary'>Buy</button>
+    </mat-card-content>
+</mat-card>

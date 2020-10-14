@@ -1,0 +1,10 @@
+.mat-card-content {
+    text-align: center;
+}
+.link {
+    color: #673ab7;
+}
+.link:hover {
+    cursor: pointer;
+    color: cornflowerblue;
+}

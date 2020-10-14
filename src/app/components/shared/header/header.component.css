@@ -1,0 +1,13 @@
+.spacer {
+    flex: 1 1 auto;
+}
+.mat-toolbar {
+    background: #fff;
+}
+a {
+    text-decoration: none;
+    color: rebeccapurple;
+}
+a:hover {
+    color: cornflowerblue;
+}

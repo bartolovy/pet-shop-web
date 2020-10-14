@@ -1,0 +1,14 @@
+ul {
+    list-style: none;
+    padding: 0px;
+}
+.active {
+    background-color: cornflowerblue;
+}
+.active a {
+    color: white;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
